@@ -8,7 +8,6 @@ export async function login() {
   await wx.getUserProfile({
     desc: "完善信息"
   }).then((res) => {
-    console.log(res)
     wx.setStorage({
       key: "storage_info",
       data: 1
@@ -25,14 +24,12 @@ export async function login() {
   await wx.cloud.callFunction({
     name: 'getuserinfo'
   }).then(res => {
-    console.log(res)
     userinfo = res.result
   });
 
   await db.collection('user_info').where({
     _openid: userinfo.openid
   }).get().then(res => {
-    console.log(res)
     dataget = res.data
   });
 
@@ -41,5 +38,4 @@ export async function login() {
       data: user
     })
   }
-
 }

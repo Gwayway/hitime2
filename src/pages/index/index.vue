@@ -12,8 +12,8 @@ export default {
     return {
       motto: "Hello miniprograme",
       userInfo: {
-        nickName: "mpvue",
-        avatarUrl: "http://mpvue.com/assets/logo.png",
+        nickName: "",
+        avatarUrl: "",
       },
     };
   },
