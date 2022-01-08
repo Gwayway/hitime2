@@ -39,7 +39,7 @@
     "useCompilerPlugins": false
   },
   "miniprogramRoot": "dist/wx/",
-  "cloudfunctionRoot": "/src/cloudfunctions/",
+  "cloudfunctionRoot": "src/cloudfunctions/",
   "compileType": "miniprogram",
   "appid": "wxffb0ae9f873c24f9",
   "projectname": "hitime",

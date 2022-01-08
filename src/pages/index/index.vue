@@ -1,6 +1,21 @@
 <template>
-  <div @click="clickHandle">
-    <button>1</button>
+  <div>
+    <!-- 头部icon,text -->
+    <i-row i-class="top-row">
+      <i-col span="6"
+        ><i-avatar i-class="icon" src="/static/images/disk.png" shape="square" size="large"></i-avatar
+      ></i-col>
+      <i-col><label class="text">Hitime</label></i-col>
+    </i-row>
+    <!-- 中部动画 -->
+    <div class="div-pic">
+      <img class="pic" src="/static/images/cat.png"/>
+    </div>
+    <div class="div-button">
+      <i-button i-class="button" type="primary" @click="clickHandle"
+        >进入你的Hi!Time</i-button
+      >
+    </div>
   </div>
 </template>
 
@@ -21,8 +36,8 @@ export default {
   components: {},
 
   methods: {
-     clickHandle(e) {
-       login()
+    clickHandle() {
+      login();
     },
   },
 
@@ -33,54 +48,32 @@ export default {
 </script>
 
 <style scoped>
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.div-button{
+  width: 100%;
+}
+.pic{
+  margin-top: 100rpx;
+}
+.div-pic{
+  width: 100%;
+  height: 60%;
+  text-align:center;
+}
+div >>> .button {
+  width: 350px;
+  border-radius: 10px !important;
+  background-color: #6236ff !important;
+  position: fixed;
+  bottom: 200rpx;
+}
+div >>> .top-row {
+  margin: 60px 20px;
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+div >>> .icon {
+  background-color: #b37feb;
 }
-
-.userinfo-nickname {
-  color: #aaa;
-}
-
-.usermotto {
-  margin-top: 150px;
-}
-
-.form-control {
-  display: block;
-  padding: 0 12px;
-  margin-bottom: 5px;
-  border: 1px solid #ccc;
-}
-.all {
-  width: 7.5rem;
-  height: 1rem;
-  background-color: blue;
-}
-.all:after {
-  display: block;
-  content: "";
-  clear: both;
-}
-.left {
-  float: left;
-  width: 3rem;
-  height: 1rem;
-  background-color: red;
-}
-
-.right {
-  float: left;
-  width: 4.5rem;
-  height: 1rem;
-  background-color: green;
+.text {
+  font-size: 30px;
 }
 </style>
